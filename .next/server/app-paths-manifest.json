@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/signin/page": "app/signin/page.js",
+  "/send/page": "app/send/page.js",
+  "/(tabs)/home/page": "app/(tabs)/home/page.js",
+  "/(tabs)/dashboard/page": "app/(tabs)/dashboard/page.js",
+  "/(tabs)/nearby/page": "app/(tabs)/nearby/page.js"
+}

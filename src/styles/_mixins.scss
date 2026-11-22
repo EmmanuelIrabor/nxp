@@ -1,0 +1,15 @@
+@use "tokens" as *;
+
+@mixin glass($alpha: 0.045) {
+  background: rgba(255, 255, 255, $alpha);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+@mixin press {
+  transition: transform 0.35s $ease, background 0.2s ease, opacity 0.2s ease;
+  &:active {
+    transform: scale(0.97);
+  }
+}

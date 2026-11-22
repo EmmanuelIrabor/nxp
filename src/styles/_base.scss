@@ -1,0 +1,72 @@
+@use "tokens" as *;
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--ink-950);
+  color: var(--white);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.screen {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(120% 55% at 50% -8%, var(--ink-600) 0%, var(--ink-800) 38%, var(--ink-950) 72%);
+  padding: calc(var(--safe-top) + 12px) $gutter calc(var(--safe-bottom) + 120px);
+}
+
+.screen--plain {
+  padding-bottom: calc(var(--safe-bottom) + 24px);
+}
+
+.enter {
+  animation: enter 0.7s $ease both;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+.scroll-x {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  margin: 0 (-$gutter);
+  padding: 0 $gutter;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
